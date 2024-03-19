@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.title{
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.primary-bg{
+  background-color: #11998e;
+  color: white;
+}
+.secondary-bg{
+  background-color: #B9F2E5;
+ 
+}
+.primary-color{
+  color: #11998e;
+}
+
+
