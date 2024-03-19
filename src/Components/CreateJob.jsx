@@ -16,27 +16,29 @@ const CreateJob = () => {
     event.preventDefault();
     console.log(data);
     try {
-      await axios.post("http://localhost:5000/job", data).then((res) => {
-        console.log(res?.data?.data);
-        if (res.data.insertedId) {
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Registrion success",
-            showConfirmButton: false,
-            timer: 2500,
-          });
-          nevigate("/");
-        } else {
-          Swal.fire({
-            position: "center",
-            icon: "error",
-            title: "Internal error",
-            showConfirmButton: false,
-            timer: 2500,
-          });
-        }
-      });
+      await axios
+        .post("https://dashboard-backend-woad.vercel.app/job", data)
+        .then((res) => {
+          console.log(res?.data?.data);
+          if (res.data.insertedId) {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Registrion success",
+              showConfirmButton: false,
+              timer: 2500,
+            });
+            nevigate("/");
+          } else {
+            Swal.fire({
+              position: "center",
+              icon: "error",
+              title: "Internal error",
+              showConfirmButton: false,
+              timer: 2500,
+            });
+          }
+        });
     } catch (error) {
       console.log(error);
     }

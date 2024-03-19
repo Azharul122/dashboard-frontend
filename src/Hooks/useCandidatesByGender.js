@@ -12,7 +12,7 @@ const useCandidatesByGender = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/gender-filterd-candidates/male"
+                    "https://dashboard-backend-woad.vercel.app/gender-filterd-candidates/male"
                 );
                 setMaleCandidates(response.data?.totalGenderFilteredCandidates);
                 setLoading(false);
@@ -32,7 +32,7 @@ const useCandidatesByGender = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/gender-filterd-candidates/female"
+                    "https://dashboard-backend-woad.vercel.app/gender-filterd-candidates/female"
                 );
                 setFemaleCandidates(response.data?.totalGenderFilteredCandidates);
                 setLoading(false);

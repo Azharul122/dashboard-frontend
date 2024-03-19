@@ -27,7 +27,10 @@ const NewApplication = () => {
     };
     try {
       await axios
-        .post("http://localhost:5000/candidate", appliacationData)
+        .post(
+          "https://dashboard-backend-woad.vercel.app/candidate",
+          appliacationData
+        )
         .then((res) => {
           if (res.data.insertedId) {
             Swal.fire({
@@ -54,9 +57,11 @@ const NewApplication = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/jobs/most-recent").then((res) => {
-      setLetestJobs(res.data);
-    });
+    axios
+      .get("https://dashboard-backend-woad.vercel.app/jobs/most-recent")
+      .then((res) => {
+        setLetestJobs(res.data);
+      });
   }, []);
   return (
     <div>

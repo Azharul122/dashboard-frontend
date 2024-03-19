@@ -21,9 +21,11 @@ const Application = () => {
   }, [candidates]);
   console.log(filterCandidates);
   useEffect(() => {
-    axios.get("http://localhost:5000/jobs/most-recent").then((res) => {
-      setLetestJobs(res.data);
-    });
+    axios
+      .get("https://dashboard-backend-woad.vercel.app/jobs/most-recent")
+      .then((res) => {
+        setLetestJobs(res.data);
+      });
   }, []);
 
   const handleClick = (data) => {
@@ -133,7 +135,9 @@ const Application = () => {
                   <p className="text-center">{candidate.applied_date}</p>
 
                   <div className="flex items-center justify-end gap-2">
-                    <Link to={`/edit-application/${candidate._id}`}><FaEdit  className="cursor-pointer text-[#11998e] text-lg" /></Link>
+                    <Link to={`/edit-application/${candidate._id}`}>
+                      <FaEdit className="cursor-pointer text-[#11998e] text-lg" />
+                    </Link>
                     <FaTrash className="cursor-pointer text-red-300 text-lg" />
                   </div>
                 </div>

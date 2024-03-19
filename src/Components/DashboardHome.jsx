@@ -18,7 +18,7 @@ const DashboardHome = () => {
   const { maleCandidates, femaleCandidates } = useCandidatesByGender();
   const [letestJobs, setLetestJobs] = useState([]);
 
-  console.log(letestJobs)
+  console.log(letestJobs);
 
   const shortlistedParcentages = Math.ceil(
     (shortlistedCandidates?.totalSortlistedCandidates * 100) /
@@ -38,7 +38,7 @@ const DashboardHome = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/jobs/most-recent")
+      .get("https://dashboard-backend-woad.vercel.app/jobs/most-recent")
       .then((res) => setLetestJobs(res.data));
   }, []);
 

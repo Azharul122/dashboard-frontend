@@ -11,7 +11,7 @@ const useShortlistedCandidates = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:5000/sortlisted-candidates"
+          "https://dashboard-backend-woad.vercel.app/sortlisted-candidates"
         );
         setSortListedCandidates(response.data);
         setLoading(false);

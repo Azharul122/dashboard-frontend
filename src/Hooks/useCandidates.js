@@ -12,7 +12,7 @@ const useCandidates = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/candidates"
+                    "https://dashboard-backend-woad.vercel.app/candidates"
                 );
                 setCandidates(response.data);
                 setLoading(false);

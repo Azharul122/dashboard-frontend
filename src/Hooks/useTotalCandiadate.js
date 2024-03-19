@@ -12,7 +12,7 @@ const useTotalCandidates = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/total-candidates"
+                    "https://dashboard-backend-woad.vercel.app/total-candidates"
                 );
                 setTotalCandidates(response.data);
                 setLoading(false);

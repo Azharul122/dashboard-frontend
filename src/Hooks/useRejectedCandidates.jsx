@@ -11,7 +11,7 @@ const useRejectedCandidates = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:5000/rejected-candidates"
+          "https://dashboard-backend-woad.vercel.app/rejected-candidates"
         );
         setRejectedCandidates(response.data);
         setLoading(false);
